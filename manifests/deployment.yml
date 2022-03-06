@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: xuhonglgettingstarted 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: xuhonglgettingstarted
+  template:
+    metadata:
+      labels:
+        app: xuhonglgettingstarted 
+    spec:
+      containers:
+        - name: xuhonglgettingstarted 
+          image: xxxuhong.azurecr.io/xuhonglgettingstarted
+          ports:
+          - containerPort: 80
